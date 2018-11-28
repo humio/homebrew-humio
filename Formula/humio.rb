@@ -1,9 +1,9 @@
 class Humio < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  url "https://github.com/humio/cli/releases/download/v0.7.0/humio_0.7.0_macOS_64-bit.tar.gz"
-  version "0.7.0"
-  sha256 "1fbe48f03fa8ff88265777549d5985af4e31a4f519dd9b990670e1c45f32e2e7"
+  url "https://github.com/humio/cli/releases/download/v0.8.0/humio_0.8.0_macOS_64-bit.tar.gz"
+  version "0.8.0"
+  sha256 "7546bb09a7799b2c80af1fe988439a85dacd87daad1c3a6d2baa9c7ec3302fab"
 
   def install
     bin.install "humio"
