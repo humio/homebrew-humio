@@ -2,16 +2,16 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.26.0"
+  version "0.26.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/humio/homebrew-humio/releases/download/v0.26.0/humioctl_0.26.0_macOS_64-bit.tar.gz"
-    sha256 "3dc9c26766f01e33d4ed2d38ec3c6d903d8c11e48dcab7bb5eae3492828a0d11"
+    url "https://github.com/humio/cli/releases/download/v0.26.1/humioctl_0.26.1_macOS_64-bit.tar.gz"
+    sha256 "d88458cfef6ce6f6c6f696b9eccf33a9748a7c5847fabbe79cad9621dff1ed26"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/humio/homebrew-humio/releases/download/v0.26.0/humioctl_0.26.0_Linux_64-bit.tar.gz"
-      sha256 "899ca3a5ab19fe67098e1d7b69e539da33652ce75735c6e0296c89be8e7374b1"
+      url "https://github.com/humio/cli/releases/download/v0.26.1/humioctl_0.26.1_Linux_64-bit.tar.gz"
+      sha256 "88beb068636217914279f739280b6ff8ffbbdf134b4ee124db075630629b666c"
     end
   end
 
