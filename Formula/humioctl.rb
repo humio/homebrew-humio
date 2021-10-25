@@ -5,25 +5,28 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.28.10"
-  bottle :unneeded
+  version "0.28.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.28.10/humioctl_0.28.10_macOS_64-bit.tar.gz"
-      sha256 "b3963af563a121c7ae0bd4003a3ec5f8cfa28fe7436b3208d4703909a7213987"
+      url "https://github.com/humio/cli/releases/download/v0.28.11/humioctl_0.28.11_macOS_64-bit.tar.gz"
+      sha256 "d574a8347b4254e7685f4d9716a2caf3912949dcbddf0d7e47156b5cec2bb7f0"
+
+      def install
+        bin.install "humioctl"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.28.10/humioctl_0.28.10_Linux_64-bit.tar.gz"
-      sha256 "88e2c0e9f10b4dad50dbd69eb5df0c81dfccae979a3efa764a614ac422e56054"
-    end
-  end
+      url "https://github.com/humio/cli/releases/download/v0.28.11/humioctl_0.28.11_Linux_64-bit.tar.gz"
+      sha256 "af5b006a771982399b641717ad65149753f12077f47f9c4cae8630ec4734eeae"
 
-  def install
-    bin.install "humioctl"
+      def install
+        bin.install "humioctl"
+      end
+    end
   end
 
   test do
