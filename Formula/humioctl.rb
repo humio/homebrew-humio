@@ -5,12 +5,20 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.28.11"
+  version "0.29.1"
 
   on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/humio/cli/releases/download/v0.29.1/humioctl_0.29.1_macOS_arm64.tar.gz"
+      sha256 "c3a9e7154936c4ac991841287eba5187dc4797ab5f17dd728e9200410febd705"
+
+      def install
+        bin.install "humioctl"
+      end
+    end
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.28.11/humioctl_0.28.11_macOS_64-bit.tar.gz"
-      sha256 "d574a8347b4254e7685f4d9716a2caf3912949dcbddf0d7e47156b5cec2bb7f0"
+      url "https://github.com/humio/cli/releases/download/v0.29.1/humioctl_0.29.1_macOS_64-bit.tar.gz"
+      sha256 "9e4d471e75294038ed5748d20e2cf272d64cbb5667cbc1238ee092da9ea3a4c2"
 
       def install
         bin.install "humioctl"
@@ -20,8 +28,16 @@ class Humioctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.28.11/humioctl_0.28.11_Linux_64-bit.tar.gz"
-      sha256 "af5b006a771982399b641717ad65149753f12077f47f9c4cae8630ec4734eeae"
+      url "https://github.com/humio/cli/releases/download/v0.29.1/humioctl_0.29.1_Linux_64-bit.tar.gz"
+      sha256 "1fda9507e414e4cd49b78fbfc7c0e12c2621b9fd4cd172407715a8c7e13b78cf"
+
+      def install
+        bin.install "humioctl"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/humio/cli/releases/download/v0.29.1/humioctl_0.29.1_Linux_arm64.tar.gz"
+      sha256 "42b69b4feeb22df4eb51cd8903ca530c7e65302df39ccc798d7305caa307410f"
 
       def install
         bin.install "humioctl"
