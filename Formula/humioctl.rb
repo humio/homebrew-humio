@@ -5,20 +5,20 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.31.0"
+  version "0.31.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.31.0/humioctl_0.31.0_macOS_64-bit.tar.gz"
-      sha256 "ff6bcfc865afaa796935b6a229d35fc998f8a55241f067204d49d2dfc7c50fd7"
+      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_macOS_64-bit.tar.gz"
+      sha256 "620ac5727fb28dea565c6a380fe6fb283db504103a7fe0b36ce4d503991e3acd"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/humio/cli/releases/download/v0.31.0/humioctl_0.31.0_macOS_arm64.tar.gz"
-      sha256 "6a1db9cd1fc5a6cb3899b6f650c67b6c4fa9dcb84cba712c886f74aacf47e5ee"
+      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_macOS_arm64.tar.gz"
+      sha256 "9c285c043483f51ffbea1dc35336c53c86fc4c37b2e1359da9b8a10ddaba2498"
 
       def install
         bin.install "humioctl"
@@ -28,16 +28,16 @@ class Humioctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.31.0/humioctl_0.31.0_Linux_64-bit.tar.gz"
-      sha256 "3f9f48f2387024fc1769dd5f08ce50fd3741183dbf96e936429fddf8e5b3e05b"
+      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_Linux_64-bit.tar.gz"
+      sha256 "69f4181e1cf444aab0a326cd71e0e1ef945d49b55094b7e9da428b606b0b42ea"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/humio/cli/releases/download/v0.31.0/humioctl_0.31.0_Linux_arm64.tar.gz"
-      sha256 "a0567e718bce2c2603e1303a9ca7069ff3fa80291577f9f1433d7f2b3409483f"
+      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_Linux_arm64.tar.gz"
+      sha256 "9b99ebeff971f6b3f309cf31b988cfd88026961895f7c366b14492f6d57204e7"
 
       def install
         bin.install "humioctl"
