@@ -5,20 +5,20 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.31.1"
+  version "0.32.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_macOS_64-bit.tar.gz"
-      sha256 "620ac5727fb28dea565c6a380fe6fb283db504103a7fe0b36ce4d503991e3acd"
+      url "https://github.com/humio/cli/releases/download/v0.32.0/humioctl_Darwin_x86_64.tar.gz"
+      sha256 "f50f7fafcd3ceff26a2f55f80ce4a7e0674bd5e81694de99159c4ec14bd28ca8"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_macOS_arm64.tar.gz"
-      sha256 "9c285c043483f51ffbea1dc35336c53c86fc4c37b2e1359da9b8a10ddaba2498"
+      url "https://github.com/humio/cli/releases/download/v0.32.0/humioctl_Darwin_arm64.tar.gz"
+      sha256 "ad864f0ac84bd938eeef9d1cafb8efb10f9151edd38e37a3aba06430ad543b70"
 
       def install
         bin.install "humioctl"
@@ -28,16 +28,16 @@ class Humioctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_Linux_64-bit.tar.gz"
-      sha256 "69f4181e1cf444aab0a326cd71e0e1ef945d49b55094b7e9da428b606b0b42ea"
+      url "https://github.com/humio/cli/releases/download/v0.32.0/humioctl_Linux_x86_64.tar.gz"
+      sha256 "6c2f97903bb0a7e6719d02953aaaf5b58236060e2b444396633734f884241fb6"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/humio/cli/releases/download/v0.31.1/humioctl_0.31.1_Linux_arm64.tar.gz"
-      sha256 "9b99ebeff971f6b3f309cf31b988cfd88026961895f7c366b14492f6d57204e7"
+      url "https://github.com/humio/cli/releases/download/v0.32.0/humioctl_Linux_arm64.tar.gz"
+      sha256 "78f7dbdda2e99dad74c9b6ee4929a8f888bb0b325a4b2829d07b37cb4813d5ec"
 
       def install
         bin.install "humioctl"
