@@ -5,20 +5,20 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.32.2"
+  version "0.32.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.32.2/humioctl_Darwin_x86_64.tar.gz"
-      sha256 "47a9822589a66fa1ad254925fe373be78bba397e3add1ce6d8816c0bafc64766"
+      url "https://github.com/humio/cli/releases/download/v0.32.3/humioctl_Darwin_x86_64.tar.gz"
+      sha256 "e2ec0f84db6a7a3225a5a95d7268e29557a4847a451480bff359ba6e9fdfcf51"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/humio/cli/releases/download/v0.32.2/humioctl_Darwin_arm64.tar.gz"
-      sha256 "19ea0605e408e2c9dd35dff04ad8ee05a4025f7bea60c73582f83e97f1ce5fe4"
+      url "https://github.com/humio/cli/releases/download/v0.32.3/humioctl_Darwin_arm64.tar.gz"
+      sha256 "c5d01c3e886d425c5d27fd5881388c778bae1694673c69b90861b7d578e7f8e2"
 
       def install
         bin.install "humioctl"
@@ -28,16 +28,16 @@ class Humioctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.32.2/humioctl_Linux_x86_64.tar.gz"
-      sha256 "47d3150c52b96dd7d1d751260364f7894cedfcb030da5403a1ba726083ba34ef"
+      url "https://github.com/humio/cli/releases/download/v0.32.3/humioctl_Linux_x86_64.tar.gz"
+      sha256 "66605b250d4c370ac7d94ca9b06d09be31f6d85754833eaf8bf66847ac5f6b81"
 
       def install
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/humio/cli/releases/download/v0.32.2/humioctl_Linux_arm64.tar.gz"
-      sha256 "2710f6e25f552f0800e178403078c217b02aa17affe3628bba834d8d446b58df"
+      url "https://github.com/humio/cli/releases/download/v0.32.3/humioctl_Linux_arm64.tar.gz"
+      sha256 "2be6119bcacf717d83f3766d5aee8472f8160194cec26dd58b0bb64d0ec0f6a5"
 
       def install
         bin.install "humioctl"
