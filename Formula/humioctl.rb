@@ -5,39 +5,39 @@
 class Humioctl < Formula
   desc "Manage and Stream Logs to Humio"
   homepage "https://humio.com/"
-  version "0.38.1"
+  version "0.40.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/humio/cli/releases/download/v0.38.1/humioctl_Darwin_x86_64.tar.gz"
-      sha256 "360c14af61d21414f31d74dabbd65d9477991517163c01cbd5d7d3f72591adfd"
+      url "https://github.com/humio/cli/releases/download/v0.40.0/humioctl_Darwin_x86_64.tar.gz"
+      sha256 "9144d0512ad4a57d8a03b7837647f7d326562ab993d9e7571b9304d8a574dfc2"
 
-      def install
+      define_method(:install) do
         bin.install "humioctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/humio/cli/releases/download/v0.38.1/humioctl_Darwin_arm64.tar.gz"
-      sha256 "d4b075cd63edc08504c27911dc7469450b6dcc9eaafa6170864718f34e603161"
+      url "https://github.com/humio/cli/releases/download/v0.40.0/humioctl_Darwin_arm64.tar.gz"
+      sha256 "cd30f74021ace6bba9b59bd8fe1c7b3fd0ed0cbaabf9981f02a4dca239f96bb0"
 
-      def install
+      define_method(:install) do
         bin.install "humioctl"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/humio/cli/releases/download/v0.38.1/humioctl_Linux_x86_64.tar.gz"
-      sha256 "1fcd90deda1d2aa450d91d4b84226c938a3756a6fd76c4c631a59ecdbbae6bf3"
-      def install
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/humio/cli/releases/download/v0.40.0/humioctl_Linux_x86_64.tar.gz"
+      sha256 "0845fcd28a43c123cd11e44a2f992859a160473f381dd49565ca46df16e67463"
+      define_method(:install) do
         bin.install "humioctl"
       end
     end
-    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/humio/cli/releases/download/v0.38.1/humioctl_Linux_arm64.tar.gz"
-      sha256 "2a5d8f3ba4700fd45fabf0ad2d561ed5f0af54304d1c1d3423cbabdfa9a5d1e1"
-      def install
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/humio/cli/releases/download/v0.40.0/humioctl_Linux_arm64.tar.gz"
+      sha256 "358301cca85e6038c120d12d4fa36e29afbc406faf3934121190cc7949fa9583"
+      define_method(:install) do
         bin.install "humioctl"
       end
     end
